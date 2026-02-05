@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pine Tree Press - Bring Your Book to Life with Pine Tree Press</title>
+    <link rel="icon" href="https://pinetreepress.com/wp-content/uploads/2024/09/cropped-Green-Logo-02-1-32x32.png" sizes="32x32">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        /* Header */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            max-width: 200px;
+        }
+        
+        .nav ul {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #2a6e3f;
+        }
+        
+        .currency-switcher {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: "Josefin Sans", sans-serif;
+        }
+        
+        .currency-switcher select {
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #fff;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://pinetreepress.com/wp-content/uploads/2024/10/pinetrees-logo-01.webp');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #2a6e3f;
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #1e5230;
+        }
+        
+        /* Process Section */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .process-item {
+            text-align: center;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .process-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .process-number {
+            font-size: 2.5rem;
+            color: #2a6e3f;
+            margin-bottom: 10px;
+        }
+        
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: #f9f9f9;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            color: #2a6e3f;
+            margin: 20px 0;
+        }
+        
+        .pricing-card ul {
+            text-align: left;
+            margin: 20px 0;
+        }
+        
+        .pricing-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        /* Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2a6e3f;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .process-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+        }
+        
+        /* Hide mobile menu toggle icons */
+        .elementor-menu-toggle,
+        .elementor-screen-only {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <img src="https://pinetreepress.com/wp-content/uploads/2024/10/pinetrees-logo-01.webp" alt="Pine Tree Press">
+                </a>
+                
+                <nav class="nav">
+                    <ul>
+                        <li><a href="https://pinetreepress.com/">Home</a></li>
+                        <li><a href="https://pinetreepress.com/about-us/">About Us</a></li>
+                        <li><a href="https://pinetreepress.com/childrens-book-illustration/">Illustrations</a></li>
+                        <li><a href="https://pinetreepress.com/book-store/">Bookstore</a></li>
+                        <li><a href="https://pinetreepress.com/ghostwriting/">Ghostwriting</a></li>
+                        <li><a href="https://pinetreepress.com/publishing/">Publishing</a></li>
+                        <li><a href="https://pinetreepress.com/editing/">Editing</a></li>
+                        <li><a href="https://pinetreepress.com/pricing/">Pricing</a></li>
+                        <li><a href="https://pinetreepress.com/partners/">Partners</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="currency-switcher">
+                    <label for="currencySwitcher">Currency:</label>
+                    <select id="currencySwitcher">
+                        <option value="USD">USD</option>
+                        <option value="AED">AED</option>
+                        <option value="AUD">AUD</option>
+                        <option value="CAD">CAD</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Publishing Since 1957</h1>
+            <p>Get your book published today and join the thousands of writers who have shared their voices with the world.</p>
+            <a href="#signup" class="btn">Sign Up</a>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem;">How It Works</h2>
+            
+            <div class="process-grid">
+                <div class="process-item">
+                    <div class="process-number">A</div>
+                    <div style="font-size: 1.5rem; margin: 10px 0;">❦</div>
+                    <h3>Select Package and Submit Your Manuscript</h3>
+                    <p>Choose the publishing package that fits your needs and send your manuscript to get started.</p>
+                </div>
+                
+                <div class="process-item">
+                    <div class="process-number">B</div>
+                    <div style="font-size: 1.5rem; margin: 10px 0;">❦</div>
+                    <h3>Get Beta-readers Feedback, Proofreading, and Formatting</h3>
+                    <p>Receive professional feedback and thorough proofreading within 48 hours.</p>
+                </div>
+                
+                <div class="process-item">
+                    <div class="process-number">C</div>
+                    <div style="font-size: 1.5rem; margin: 10px 0;">❦</div>
+                    <h3>Review the File and Approve</h3>
+                    <p>Take your time to review the formatted file and give us the green light.</p>
+                </div>
+                
+                <div class="process-item">
+                    <div class="process-number">D</div>
+                    <div style="font-size: 1.5rem; margin: 10px 0;">❦</div>
+                    <h3>Get Your Book Published on Multiple Platforms</h3>
+                    <p>Your book will be published on Amazon, Apple Books, Barnes & Noble, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" style="background: #f5f5f5;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem;">Book Publishing Packages</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 50px;">At Pine Tree Press, we offer a range of publishing packages tailored to meet your needs.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">$<span class="currency-value">199</span></div>
+                    <ul>
+                        <li>Publishing on Amazon in eBook, Paperback, & Hardcover Formats</li>
+                        <li>Complimentary Proofreading and Formatting</li>
+                        <li>Beta-readers Feedback Report</li>
+                        <li>Categories Research & Listing</li>
+                        <li>Prelisting on Amazon</li>
+                        <li>ePub Formatting</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>Keywords Research & Listing</li>
+                    </ul>
+                    <a href="#" class="btn">Chat Now</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Professional</h3>
+                    <div class="price">$<span class="currency-value">299</span></div>
+                    <ul>
+                        <li>Publishing on Amazon & Apple Books in eBook, Paperback, & Hardcover Formats</li>
+                        <li>Complimentary Proofreading and Formatting</li>
+                        <li>Beta-readers Feedback Report</li>
+                        <li>Categories Research & Listing</li>
+                        <li>Prelisting on Amazon & Apple Books</li>
+                        <li>ePub Formatting</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>Keywords Research & Listing</li>
+                    </ul>
+                    <a href="#" class="btn">Chat Now</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Advanced</h3>
+                    <div class="price">$<span class="currency-value">399</span></div>
+                    <ul>
+                        <li>Publishing on Multiple Platforms in eBook, Paperback, & Hardcover Formats</li>
+                        <li>Complimentary Proofreading and Formatting</li>
+                        <li>Beta-readers Feedback Report</li>
+                        <li>Categories Research & Listing</li>
+                        <li>Prelisting on Multiple Platforms</li>
+                        <li>ePub Formatting</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>Keywords Research & Listing</li>
+                    </ul>
+                    <a href="#" class="btn">Chat Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="signup" class="section">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 30px; font-size: 2.5rem;">Get Started Today</h2>
+                <p style="text-align: center; margin-bottom: 40px;">Our publishing expert will reach out to you to explain our process and help you embark on your publishing journey.</p>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea placeholder="Message..." rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="https://pinetreepress.com/wp-content/uploads/2024/10/pinetrees-logo-white.webp" alt="Pine Tree Press" class="footer-logo">
+                    <p>At Pine Tree Press, we are dedicated to empowering authors and bringing their stories to life. Established in 1957, our mission has always been to support writers throughout their publishing journey.</p>
+                </div>
+                
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="/" style="display: block; padding: 5px 0;">Home</a></li>
+                        <li><a href="https://pinetreepress.com/about-us/" style="display: block; padding: 5px 0;">About Us</a></li>
+                        <li><a href="https://pinetreepress.com/book-store/" style="display: block; padding: 5px 0;">Bookstore</a></li>
+                        <li><a href="https://pinetreepress.com/childrens-book-illustration/" style="display: block; padding: 5px 0;">Illustrations</a></li>
+                        <li><a href="https://pinetreepress.com/ghostwriting/" style="display: block; padding: 5px 0;">Ghostwriting</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Contact Us</h3>
+                    <div style="margin-top: 20px;">
+                        <p><strong>Email:</strong> <a href="mailto:Info@pinetreepress.com" style="color: white;">Info@pinetreepress.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+18782014092" style="color: white;">+1 (878) 201-4092</a></p>
+                        <p><strong>Address:</strong> 429 Fourth Ave #7th, Pittsburgh, PA, 15219, USA</p>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/pinetreepresspublishing" target="_blank">FB</a>
+                        <a href="https://www.instagram.com/pinetree_press/?hl=en" target="_blank">IG</a>
+                        <a href="https://www.youtube.com/@PineTreePress/shorts" target="_blank">YT</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>© 1957 - 2025 Pine Tree Press, ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Currency Converter
+        const exchangeRates = {
+            USD: 1,
+            AED: 3.67,
+            AUD: 1.55,
+            CAD: 1.35
+        };
+
+        function applyCurrency(currency) {
+            document.querySelectorAll(".price").forEach(priceElement => {
+                const baseValue = parseFloat(priceElement.querySelector(".currency-value").textContent);
+                const convertedValue = baseValue * exchangeRates[currency];
+                priceElement.innerHTML = `$${Math.round(convertedValue)}`;
+            });
+        }
+
+        const dropdown = document.getElementById("currencySwitcher");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedCurrency = localStorage.getItem("selectedCurrency") || "USD";
+            dropdown.value = savedCurrency;
+            applyCurrency(savedCurrency);
+        });
+
+        dropdown.addEventListener("change", function() {
+            const selectedCurrency = this.value;
+            localStorage.setItem("selectedCurrency", selectedCurrency);
+            applyCurrency(selectedCurrency);
+        });
+
+        // Form Submission
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Thank you for your interest! We'll contact you soon.");
+            this.reset();
+        });
+    </script>
+</body>
+</html>

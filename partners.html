@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners - Airmont Publishing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-orange: #d97720;
+            --dark-forest: #1a1a1a;
+            --text-gray: #666;
+        }
+
+        body { font-family: 'Open Sans', sans-serif; color: #333; }
+        .brand-font { font-family: 'Playfair Display', serif; }
+
+        /* Navbar Enhancement */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95) !important;
+        }
+
+        /* Hero Section with Overlay */
+        .partners-hero {
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                        url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Stats Section */
+        .stat-box h3 { color: var(--primary-orange); font-weight: 700; margin-bottom: 0; }
+        .stat-box p { font-size: 0.9rem; color: #777; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Modern Accordion */
+        .accordion-item {
+            border: none !important;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 12px !important;
+            overflow: hidden;
+        }
+        .accordion-button {
+            padding: 1.5rem;
+            font-weight: 600;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #fff;
+            color: var(--primary-orange);
+            box-shadow: none;
+        }
+        .accordion-button:focus { box-shadow: none; }
+        
+        .partner-logo-sm { height: 25px; width: 100px; object-fit: contain; margin-right: 1rem; }
+        
+        .royalty-badge {
+            background: #fff4e6;
+            color: var(--primary-orange);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-left: auto;
+            font-weight: 700;
+            border: 1px solid #ffe8cc;
+        }
+
+        /* Form Styling */
+        .contact-card {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        .btn-orange {
+            background-color: var(--primary-orange);
+            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 12px;
+            transition: 0.3s;
+        }
+        .btn-orange:hover {
+            background-color: #bf651a;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Footer Icons */
+        .icon-circle {
+            width: 40px; height: 40px;
+            background: rgba(217, 119, 32, 0.1);
+            color: var(--primary-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #bbb;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .footer-links a:hover { color: var(--primary-orange); padding-left: 5px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light py-3 sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand brand-font fw-bold" href="index.html">
+            <i class="fas fa-mountain" style="color:var(--primary-orange);"></i> AIRMONT
+            <span class="logo-sub" style="font-size: 0.7rem; display: block; margin-top: -4px; color: #666; font-weight: 400; letter-spacing: 3px;">PUBLISHING</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="illustrations.html">Illustrations</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="bookstore.html">Bookstore</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="ghostwriting.html">Ghostwriting</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="publishing.html">Publishing</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="editing.html">Editing</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="partners.html">Partners</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="partners-hero">
+    <div class="container text-center">
+        <h1 class="display-3 fw-bold mb-0">Our Global Partners</h1>
+        <p class="lead">Connecting your stories to the world's biggest stages.</p>
+    </div>
+</section>
+
+<section class="py-5 bg-white border-bottom">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-6 col-md-3 stat-box">
+                <h3>100+</h3>
+                <p>Global Channels</p>
+            </div>
+            <div class="col-6 col-md-3 stat-box">
+                <h3>70%</h3>
+                <p>Max Royalties</p>
+            </div>
+            <div class="col-6 col-md-3 stat-box">
+                <h3>50+</h3>
+                <p>Countries</p>
+            </div>
+            <div class="col-6 col-md-3 stat-box">
+                <h3>24/7</h3>
+                <p>Author Support</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container" style="max-width: 850px;">
+        <div class="text-center mb-5">
+            <h2 class="brand-font fw-bold">Distribution Network</h2>
+            <p class="text-muted">We ensure your book is available where readers shop.</p>
+        </div>
+
+        <div class="accordion" id="partnersAccordion">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#amazon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="partner-logo-sm" alt="Amazon">
+                        <span class="royalty-badge">Up to 70% Royalty</span>
+                    </button>
+                </h2>
+                <div id="amazon" class="accordion-collapse collapse show" data-bs-parent="#partnersAccordion">
+                    <div class="accordion-body text-muted">
+                        <p>With Amazon's Kindle platform, authors can distribute eBooks to dozens of international markets, including the US, Canada, the UK, and Australia.</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success me-2"></i> <strong>eBook:</strong> 70% Royalty</li>
+                            <li><i class="fas fa-check text-success me-2"></i> <strong>Paperback:</strong> 60% (Exclusive)</li>
+                            <li><i class="fas fa-check text-success me-2"></i> <strong>Hardcover:</strong> 60%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#apple">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" style="width:25px;" class="me-4" alt="Apple">
+                        <span class="ms-1">Apple Books</span>
+                        <span class="royalty-badge">40% Royalty</span>
+                    </button>
+                </h2>
+                <div id="apple" class="accordion-collapse collapse" data-bs-parent="#partnersAccordion">
+                    <div class="accordion-body text-muted">
+                        Distribution to over 50 countries through the Apple Books store. Perfect for reaching iPad and iPhone users globally with high-quality eBook formatting.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Barnes_%26_Noble_logo.svg" class="partner-logo-sm" alt="B&N">
+                        <span class="royalty-badge">40% Royalty</span>
+                    </button>
+                </h2>
+                <div id="bn" class="accordion-collapse collapse" data-bs-parent="#partnersAccordion">
+                    <div class="accordion-body text-muted">
+                        Reach millions of dedicated readers in the US via the NOOK device ecosystem and B&N’s massive online retail presence.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#google">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="partner-logo-sm" alt="Google">
+                        <span class="royalty-badge">40% Royalty</span>
+                    </button>
+                </h2>
+                <div id="google" class="accordion-collapse collapse" data-bs-parent="#partnersAccordion">
+                    <div class="accordion-body text-muted">
+                        Massive discoverability via Google Play Store and Google Books search, making your title visible to Android users worldwide.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+ <section class="section-padding" style="background-color: #fdfdfd;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card border-0 shadow-sm p-5">
+                        <h2 class="text-center brand-font mb-4">Get Started Today</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3"><input type="text" class="form-control" placeholder="Full Name"></div>
+                                <div class="col-md-6 mb-3"><input type="email" class="form-control" placeholder="Email"></div>
+                                <div class="col-md-12 mb-3"><input type="text" class="form-control" placeholder="Phone Number"></div>
+                                <div class="col-md-12 mb-4"><textarea class="form-control" rows="4" placeholder="Message..."></textarea></div>
+                                <div class="col-md-12 text-center">
+                                    <button class="btn btn-orange w-100 py-3 fw-bold">SEND</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container py-4">
+        <div class="row g-5 justify-content-between">
+            <div class="col-lg-4">
+                <a class="navbar-brand brand-font fw-bold text-white mb-4 d-block" href="#">
+                    <i class="fas fa-mountain" style="color:var(--primary-orange);"></i> AIRMONT
+                    <span class="logo-sub" style="font-size: 0.65rem; display: block; color: #bbb; letter-spacing: 2px;">PUBLISHING</span>
+                </a>
+                <p class="small lh-lg" style="color: #bbb;">
+                    Since 1957, we've been the bridge between aspiring authors and the global market. Your story deserves a professional home.
+                </p>
+                <div class="mt-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" width="40" class="me-2" alt="MC">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" width="40" class="me-2" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="40" alt="Paypal">
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <h6 class="text-uppercase fw-bold mb-4" style="color:var(--primary-orange); font-size: 0.8rem;">Quick Links</h6>
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Bookstore</a>
+                    <a href="#">Publishing</a>
+                    <a href="#">Pricing</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h6 class="text-uppercase fw-bold mb-4" style="color:var(--primary-orange); font-size: 0.8rem;">Contact Us</h6>
+                <div class="contact-info small text-white-50">
+                    <div class="d-flex mb-3">
+                        <div class="icon-circle me-3"><i class="fas fa-envelope"></i></div>
+                        <div>info@airmontpublishing.com</div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="icon-circle me-3"><i class="fas fa-phone-alt"></i></div>
+                        <div>+1 (878) 201-4092</div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="icon-circle me-3"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>429 Fourth Ave #7th, Pittsburgh, PA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-5 border-secondary opacity-25">
+        <p class="text-center small mb-0 opacity-50">© 1957 - 2026 Airmont Publishing. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
